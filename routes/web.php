@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategorieController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('visiteur.menu');
 });
+
+Route::get("/menu", [CategorieController::class, "index"])->name("menu");
+Route::get("/plats/{categorie}", [CategorieController::class, "plats"])->name("plats_categorie");
