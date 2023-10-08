@@ -1,3 +1,1 @@
-practice in laravel 
-p1
-
+practice in laravel
